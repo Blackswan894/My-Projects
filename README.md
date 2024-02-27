@@ -1,0 +1,1 @@
+In this game, two players compete in the 3 x 3 grid game Tic-Tac-Toe. Individuals take turns playing. "X" and "O" are marked on one and respectively. When a player lines up three of their markers in a row, a column, or a diagonal, that player is deemed the winner. 

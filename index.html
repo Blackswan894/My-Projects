@@ -1,42 +1,40 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- this is how we link up the stylesheet -->
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<!-- And this is how we link up the JS! -->
-<script defer src="js/main.js"></script>
-<!--the word defer tells the browser to wait
-to execute that JS block until the DOM is fully
-parsed.-->
-    <title>The Tic-tac-toe fun game</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Task Tracker</title>
 </head>
 <body>
-    <h1>Tic-Tac-Toe</h1>
-<h2>It's X's turn!
-    /*----- cached element references -----*/
-const squares = Array.from(document.querySelectorAll('#board div'));
-// new code below
-const messages = document.querySelector('h2');
-</h2>
-<!-- Many websites are just divs on divs on divs. Pay attention to the class and id attributes. We will be using those later to style and find elements in the document -->
-<div class="flex-container flex-column">
-<div class="flex-container flex-wrap" id="board">
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
+<div class="container">
+<h1>Task Tracker</h1>
+<form id="taskForm">
+<!-- Task form inputs go here -->
+<div>
+    <label for="taskName">Task Name:</label>
+    <input type="text" id="taskName" required>
 </div>
-<!-- A reset button because users are going to want to play round after round of your glorious game without ever refreshing the browser! -->
-<button id="reset-button">reset</button>
+
+<!--Task description text area goes here-->
+<div>
+    <label for="taskDescription">Task Description:</label>
+    <textarea id="textDescription" required></textarea>
 </div>
-    
+
+<!--Task deadline input-->
+<div>
+    <label for="taskDeadline">Task Deadline:</label>
+    <input type="date" id="taskDeadline" required>
+</div>
+<!-- Task form inputs go here -->
+<button type="submit">Add Task</button>
+</form>
+<table id="taskTable">
+<!-- Task table content here -->
+</table>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
